@@ -1,0 +1,512 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #2E2E2E;
+}
+
+body {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/*탑바*/
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    height: 70px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* 다른 요소 위에 고정 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0 88px;
+    justify-content: space-between; /* 좌우 끝에 home과 menu 배치 */
+    align-items: center;
+}
+.content {
+    padding-top: 130px; /* 상단 바 공간만큼 여백 추가 */
+    width: 1200px;
+    margin: 0 auto;
+    color: #2E2E2E;
+}
+h1{
+    font-size: 30px;
+    font-weight: 800;
+}
+h2{
+    font-size: 22px;
+    font-weight: 600;
+}
+.menu {
+    display: flex;
+    justify-content: center; /* 가로 중앙 정렬 */
+    gap: 62px; /* 항목 사이의 간격 */
+    margin: 0; /* 전체 화면에서 중앙 정렬 */
+    padding: 0;
+}
+.Branding:hover {
+    color:#878787; /* 마우스 오버 시 색상 변경 */
+}
+.Graphic:hover {
+    color: #878787; /* 마우스 오버 시 색상 변경 */
+}
+.Web:hover {
+    color: #878787; /* 마우스 오버 시 색상 변경 */
+}
+.Ux:hover {
+    color: #878787; /* 마우스 오버 시 색상 변경 */
+}
+
+
+
+/*프로필*/
+.contentProfile{
+    padding: 0 88px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:122px;
+    color: #2E2E2E;
+}
+.contactBtn {
+    width: 165px;
+    height: 49px;
+    font-size: 20px;
+    background-color:#9d9d9d; /* 버튼 배경색 */
+    color: white; /* 텍스트 색상 */
+    border: none;
+    border-radius: 15px; /* 모서리 둥글게 */
+    cursor: pointer;
+    display: flex;
+    justify-content: center; /* 텍스트 가로 중앙 정렬 */
+    align-items: center; /* 텍스트 세로 중앙 정렬 */
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.contactBtn:hover {
+    background-color: #7d7d7d; /* 마우스 오버 시 색상 변경 */
+}
+.googleBtn {
+    width: 259px;
+    height: 49px;
+    font-size: 20px;
+    background-color: #9d9d9d; /* 버튼 배경색 */
+    color: white; /* 텍스트 색상 */
+    border: none;
+    border-radius: 15px; /* 모서리 둥글게 */
+    cursor: pointer;
+    display: flex;
+    justify-content: center; /* 텍스트 가로 중앙 정렬 */
+    align-items: center; /* 텍스트 세로 중앙 정렬 */
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.googleBtn:hover {
+    background-color: #7d7d7d; /* 마우스 오버 시 색상 변경 */
+}
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: auto;
+}
+.Profile{
+    width: 481px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 50px; /**/
+    margin-right: 50px; /**/
+}
+h3{
+    line-height: 1.5;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+
+
+/*소개*/
+.Intro,.Project,.Howto{
+    padding: 130px 88px 0px 88px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.INTRODUCTION,.PROJECT,.HOWTO {
+    margin-right: auto; /* 부모의 가장 왼쪽에 배치 */
+}
+.introFirst,.introSecond{
+    padding-top: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+}
+.introfirstFirst,.introfirstSecond{
+    width: 493px;
+    height: 275px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; 
+    background-color: #ffffff;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 20px 35px;
+    border-radius: 10px;
+    color: #1e1e1e;
+
+}
+.introsecondFirst,.introsecondSecond{
+    width: 493px;
+    height: 218px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; 
+    background-color: #ffffff;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 20px 35px;
+    border-radius: 10px;
+    color: #1e1e1e;
+
+}
+.introCON{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+h4{
+    font-size: 18px;
+    line-height: 1.7;
+    font-weight: 500;
+}
+
+.PROJECTContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 493px); /* 2열로 고정 */
+    grid-auto-rows: 230px; /* 각 행의 높이 고정 */
+    gap: 38px; /* 각 아이템 사이 간격 */
+    justify-content: center; /* 가운데 정렬 */
+    padding-top: 48px;
+}
+.PROJECTitem {
+    width: 493px;
+    height: 230px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #D9D9D9;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+.projecttitle{
+    position: absolute;
+    justify-content: top;
+    color: rgb(45, 45, 45);
+    z-index: 2; /* 이미지 위에 표시 */
+    font-size: 26px;
+    font-weight: 700;
+    transition: color 0.2s ease;
+    margin: 0;
+    flex-direction: column;
+    display: flex;
+}
+.projecttitle span {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 8px;
+    width: 380px;
+}
+
+
+.svg1{
+    margin-left: 20px;
+}
+.svg2{
+    margin-top: 56px;
+}
+
+.howTo{
+    padding: 0 88px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 37px;
+}
+.howtoContent{
+    width: 681px;
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+}
+p{
+    font-size: 20px;
+    line-height: 1.5;
+}
+.howtoTitle{
+    margin-top: 40px;
+}
+.howtoTitle2{
+    margin-top: 16px;
+}
+.contactBtn2,.googleBtn2,.projectBtn2{
+    width: 165px;
+    height: 49px;
+    font-size: 20px;
+    background-color: #9d9d9d; /* 버튼 배경색 */
+    color: white; /* 텍스트 색상 */
+    border: none;
+    border-radius: 10px; /* 모서리 둥글게 */
+    cursor: pointer;
+    display: flex;
+    justify-content: center; /* 텍스트 가로 중앙 정렬 */
+    align-items: center; /* 텍스트 세로 중앙 정렬 */
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.contactBtn2:hover,.googleBtn2:hover,.projectBtn2:hover{
+    background-color: #7d7d7d; /* 마우스 오버 시 색상 변경 */
+}
+.btn2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 57px; 
+    margin-top: 48px; 
+}
+
+
+
+.footer{
+    bottom: 0;
+    width: 1200px;
+    height: 220px;
+    background-color: #f0f0f0;
+    color: rgb(109, 109, 109);
+    display: flex;
+    margin-top: 250px;
+    padding: 88px;
+    padding-top: 56px;
+}
+.footerContent{
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    gap: 108px;
+}
+a:visited {
+    text-decoration: none; /* 밑줄 없애기 */
+    color: rgb(109, 109, 109);/* 보라색 대신 링크 색상을 기본으로 변경 */
+}
+a:link{
+    text-decoration: none;
+}
+
+
+.modal {
+    display: none; /* 기본적으로 보이지 않음 */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 배경을 어둡게 처리 */
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    width: 450px;
+    height: 310px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 24px;
+}
+.modal-text{
+    display: flex;
+    justify-content: flex-start; 
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+    position: relative;
+    margin-top: 25px;
+    margin-right: 80px;
+    z-index: 3000;
+}
+/* 닫기 버튼 */
+.closeModalBtn {
+    width: 112px;
+    height: 50px;
+    padding: 4px;
+    font-size: 20px;
+    background-color: #9d9d9d; /* 버튼 배경색 */
+    color: white; /* 텍스트 색상 */
+    border: none;
+    border-radius: 10px; /* 모서리 둥글게 */
+    cursor: pointer;
+    display: flex;
+    justify-content: center; /* 텍스트 가로 중앙 정렬 */
+    align-items: center; /* 텍스트 세로 중앙 정렬 */
+}
+
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none; /* 기본적으로 보이지 않음 */
+    z-index: 999; /* 오버레이가 모든 요소 위에 뜨도록 설정 */
+}
+
+/* #Project 섹션 강조 스타일 */
+.highlight {
+    position: relative;
+    z-index: 1000; /* 다른 요소보다 앞에 표시 */
+    background-color: rgb(255, 255, 255); /* 강조할 때 배경을 밝게 */
+    padding-bottom: 120px;
+    border-radius: 30px;
+    box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.5);
+}
+
+
+
+
+.title{
+    padding: 0 88px;
+    display: flex;
+    font-size: 28px;
+}
+.detailContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    padding: 88px;
+    margin: auto;
+    flex-direction: column; 
+    margin-bottom: 48px;
+}
+
+
+
+
+
+
+
+.scroll-container-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* 버튼을 고정할 기준이 되는 부모 요소 */
+    margin: auto;
+    margin-top: 52px;
+    width: 1000px;
+    padding: 0 72px;
+    /* border: 1px solid #000; */
+    border: none;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: hidden;
+    /* border: 1px solid #000; */
+    border: none;
+    margin: auto;
+    height: 245px;
+    align-items: center;
+    
+}
+
+.scroll-item {
+    flex-shrink: 0;
+    width: 493px;
+    height: 230px;
+    margin-right: 24px;
+    border-radius: 10px;
+    background-color: lightblue;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+    overflow-y: hidden;
+}
+.scroll-item:last-child {
+    margin-right: 4px; /* 마지막 아이템의 margin-right를 0으로 설정 */
+}
+.scroll-item:first-child {
+    margin-left: 4px; /* 마지막 아이템의 margin-right를 0으로 설정 */
+}
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: none;
+    padding: 10px; /* 버튼 내부에 패딩을 추가하여 크기를 조정 */
+    cursor: pointer;
+    z-index: 2;
+    width: 50px; /* 버튼 가로 크기 */
+    height: 50px; /* 버튼 세로 크기 */
+    border-radius: 5%; /* 원형 버튼 모양 */
+    transition: background-color 0.2s ease; /* 배경색 변환 애니메이션 */
+}
+.scroll-button:active {
+    background-color: rgba(0, 0, 0, 0.7); /* 클릭 시 더 어두운 색상 */
+}
+
+.scroll-button.left {
+    left: 0;
+}
+
+.scroll-button.right {
+    right: 0;
+}
+
+.scroll-button.left {
+    left: 0; /* 컨테이너 밖에서 고정된 위치 */
+}
+
+.scroll-button.right {
+    right: 0; /* 컨테이너 밖에서 고정된 위치 */
+}
+
+.itemsimage:hover{
+    filter: brightness(0.9); 
+    transition: filter 0.2s ease; 
+}
+.projectsimage:hover{
+    filter: brightness(0.7); 
+    transition: filter 0.2s ease; 
+}
+.PROJECTitem:hover .projecttitle{
+    color: #ffffff;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/index.css">
+    <link rel="stylesheet" href="/style/web.css">
+    <title>webport</title>
+</head>
+<body>
+    <div class="top-bar">
+        <h1 class="home" id="home">ESMAE</h1>
+        <div class="menu">
+            <h2 class="Branding" id="Branding">Branding</h2>
+            <h2 class="Graphic" id="Graphic">Graphic</h2>
+            <h2 class="Web" id="Web" style="color: #878787;">Web development</h2>
+            <h2 class="Ux" id="Ux">UX design</h2>
+        </div>
+    </div>
+
+    <section class="content">
+        <h2 class="title">Web development</h2>
+
+        <div class="detailContent">
+        </div>
+
+        <h2 class="title">Other Web development</h2>
+        <div class="scroll-container-wrapper">
+            <button class="scroll-button left" id="scrollLeft">◀</button>
+            <div class="scroll-container" id="scrollContainer">     
+            </div>
+            <button class="scroll-button right" id="scrollRight">▶</button>
+        </div>
+
+        <div class="footer">
+            <div class="footerContent">
+                <h2 id="footerHome">Esmae</h1>
+                <p style="font-size: 14px;" style="line-height: 8px;">&copy; 2024 Your Company Name. All rights reserved<br>
+                E-mail: esmae_esmae@naver.com<br>
+                Insartgram: @esmae802 &nbsp;&nbsp;&nbsp; Naver-blog: esmae_esmae<br>
+                본 포토폴리오는 사실과 다름 없음을 증명합니다.<br>추가적인 증명서류가 필요할 경우 작가에게 연락주시길 바랍니다.
+                </p>
+                <p style="font-size: 15px;">-작업링크-<br>
+                TOY-WEB-PROJECT:<a href="https://esmae-clothes-bcd1e2ae5f29.herokuapp.com/index.html" target="_blank" style="font-size: 17px;">&nbsp;&nbsp;esmae-clothes</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollContainer = document.getElementById('scrollContainer');
+            const webItems = {
+                clothes: "/image/webclothesSomenail.png",
+                portfolio: "/image/webportfolioSomenail.png",
+                samebut: "/image/websamebutSomenail.png"
+                
+            };
+
+            // URL 파라미터에서 선택된 항목의 ID를 가져옴
+            const urlParams = new URLSearchParams(window.location.search);
+            const selectedWeb = urlParams.get('item');  // 예: 'brandingchungnam'
+
+            // 선택된 항목을 제외하고 나머지 항목들을 스크롤 컨테이너에 추가
+            for (const [key, value] of Object.entries(webItems)) {
+                if (key !== selectedWeb) {
+                    const imgElement = document.createElement('img');
+                    imgElement.src = value;
+                    imgElement.alt = key;
+                    imgElement.style.width = '493px';
+
+                    const scrollItemDiv = document.createElement('div');
+                    scrollItemDiv.classList.add('scroll-item');
+                    scrollItemDiv.appendChild(imgElement);
+
+                     // 각 아이템에 클릭 이벤트 추가
+                    scrollItemDiv.addEventListener('click', function() {
+                        // 클릭된 항목에 맞는 페이지로 이동
+                        window.location.href = `webport.html?item=${key}`;
+                    });
+
+                    scrollContainer.appendChild(scrollItemDiv);
+                }
+            }
+            let scrollInterval;
+            // 왼쪽으로 스크롤하는 함수
+            function scrollLeft() {
+                scrollContainer.scrollBy({ left: -10, behavior: 'auto' }); // 매번 조금씩 스크롤
+            }
+
+            // 오른쪽으로 스크롤하는 함수
+            function scrollRight() {
+                scrollContainer.scrollBy({ left: 10, behavior: 'auto' });
+            }
+
+            // 버튼을 꾹 누르고 있을 때 스크롤을 지속하게 설정
+            document.getElementById('scrollLeft').addEventListener('mousedown', function() {
+                scrollInterval = setInterval(scrollLeft, 10); // 10ms마다 스크롤
+            });
+
+            document.getElementById('scrollRight').addEventListener('mousedown', function() {
+                scrollInterval = setInterval(scrollRight, 10);
+            });
+
+            // 마우스를 떼거나 버튼을 벗어나면 스크롤 중지
+            document.addEventListener('mouseup', function() {
+                clearInterval(scrollInterval);
+            });
+
+            document.getElementById('scrollLeft').addEventListener('mouseleave', function() {
+                clearInterval(scrollInterval);
+            });
+
+            document.getElementById('scrollRight').addEventListener('mouseleave', function() {
+                clearInterval(scrollInterval);
+            });
+        });
+    </script>
+    
+    <script src="/js/index.js"></script>
+    <script src="/js/webport.js"></script>
+</body>
+</html>
